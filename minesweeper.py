@@ -237,11 +237,16 @@ while True:
             m[pos1 - 1][pos2 - 1].show = m[pos1 - 1][pos2 - 1].inside
             display()
             print('You lose!')
-            break
+            quit()
         else:
             config(pos1 - 1, pos2 - 1)
             display()
+            if check():
+                break
     else:
         m[pos1 - 1][pos2 - 1].show = '▶'
         display()
+        if check():
+            break
+print("You win!")
         
